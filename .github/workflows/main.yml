@@ -4,6 +4,10 @@ on: [push, pull_request]
 
 env:
   MIX_ENV: test
+  # libsodium's autogen.sh re-downloads config.guess/config.sub from GNU
+  # Savannah (curl without -f, so an outage saves an HTML error page as the
+  # script). autoreconf already installs working copies from automake.
+  DO_NOT_UPDATE_CONFIG_SCRIPTS: "1"
 
 jobs:
   test:
