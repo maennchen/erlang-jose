@@ -86,8 +86,8 @@ jobs:
         id: setupBeam
         uses: erlef/setup-beam@v1
         with:
-          elixir-version: 1.19.3
-          otp-version: 28.1.1
+          elixir-version: 1.20.2
+          otp-version: 29.0.3
 
       - name: Retrieve Mix Dependencies Cache
         uses: actions/cache@v4
